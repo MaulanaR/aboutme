@@ -106,7 +106,7 @@ nav .container {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--white-color) !important;
     border: 1px solid var(--primary-color);
 }
 
@@ -117,8 +117,8 @@ nav .container {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
 }
 
 .btn-secondary:hover {
@@ -150,11 +150,26 @@ section {
     color: var(--secondary-color);
 }
 
+.skill {
+    min-height: calc(20vh - 210px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url('../assets/background/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* Hero Section */
 .hero {
     min-height: calc(100vh - 70px);
     display: flex;
     align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../assets/background/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-content {
@@ -167,15 +182,13 @@ section {
 .hero-text h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--heading-color);
-    line-height: 1.2;
+    color: var(--white-color);
 }
 
-.hero-text p:first-of-type {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin: 10px 0;
+.hero-text h1,
+.hero-text p {
+    color: var(--white-color);
+    
 }
 
 .hero-summary {
@@ -193,9 +206,8 @@ section {
 }
 
 .hero-image img {
-    max-width: 400px;
+    max-width: 500px;
     /* border-radius: 50%; */
-    border-bottom: 8px solid var(--section-bg-color);
     /* box-shadow: var(--shadow); */
 }
 
