@@ -1,0 +1,25 @@
+name: PushToServer
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  push_server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start SSH
+        uses: Tofandel/ssh-server-action@v1.0.0
+        with:
+          hostname: maulanar.my.id
+          debug: true
+          user_name: maulana
+          sudo_access: yes
+          public_key: ${{secrets.PUBLICKEY}}
+        
+      - name: Prosess
+        run: | 
+            cd /home/maulana/maulanar
+            git pull origin main
+        
+    
