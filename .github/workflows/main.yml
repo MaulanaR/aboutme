@@ -16,5 +16,8 @@ jobs:
           host: maulanar.my.id
           user: maulana
           key: ${{secrets.PUBLICKEY}}
-          command: cd /home/maulana/maulanar && sudo su && git pull origin master
+          command: |
+            cd /home/maulana/maulanar
+            git config --global --add safe.directory /home/maulana/maulanar
+            git pull origin master
     
