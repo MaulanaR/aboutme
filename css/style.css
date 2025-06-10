@@ -117,8 +117,8 @@ nav .container {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--white-color);
-    border: 1px solid var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
@@ -166,7 +166,7 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../assets/background/bg.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), url('../assets/background/bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -182,12 +182,12 @@ section {
 .hero-text h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--white-color);
+    color: var(--text-color);
 }
 
 .hero-text h1,
 .hero-text p {
-    color: var(--white-color);
+    color: var(--text-color);
     
 }
 
