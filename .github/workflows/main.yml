@@ -3,6 +3,8 @@ name: PushToServer
 on:
   push:
     branches: [main]
+  pull_pull_request:
+    branches: [main]
 
 jobs:
   push_server:
