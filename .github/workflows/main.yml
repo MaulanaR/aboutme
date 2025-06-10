@@ -18,6 +18,5 @@ jobs:
           key: ${{secrets.PUBLICKEY}}
           command: |
             cd /home/maulana/maulanar
-            git config --global --add safe.directory /home/maulana/maulanar
             git pull origin master
     
