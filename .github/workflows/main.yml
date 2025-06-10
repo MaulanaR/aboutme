@@ -11,17 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start SSH
-        uses: Tofandel/ssh-server-action@v1.0.0
+        uses: fifsky/ssh-action@v0.0.6
         with:
-          hostname: maulanar.my.id
-          debug: true
-          user_name: maulana
-          sudo_access: yes
-          public_key: ${{secrets.PUBLICKEY}}
-        
-      - name: Prosess
-        run: | 
-            cd /home/maulana/maulanar
-            git pull origin main
-        
+          host: maulanar.my.id
+          user: maulana
+          key: ${{secrets.PUBLICKEY}}
+          command: cd /home/maulana/maulanar && sudo su && git pull origin master
     
