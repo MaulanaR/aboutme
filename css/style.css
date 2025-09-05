@@ -38,6 +38,30 @@ body {
 }
 
 /* Header & Navigation */
+
+/* Language Switch Button */
+.btn-lang {
+    background: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 4px 18px;
+    margin-left: 8px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    outline: none;
+}
+.btn-lang:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-lang.active {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-hover-color);
+}
 header {
     background-color: var(--white-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
