@@ -22,7 +22,9 @@
                     <li><a href="#experience" id="nav-experience">Pengalaman</a></li>
                     <li><a href="#skills" id="nav-skills">Keahlian</a></li>
                     <li><a href="#projects" id="nav-projects">Proyek</a></li>
-                    <li><a href="#contact" class="btn btn-primary" id="nav-contact">Kontak</a></li>
+                    <li>
+                        <div class="lottie-container"></div>
+                    </li>
                 </ul>
                 <div class="lang-switch">
                     <button id="btn-id" class="btn-lang active">ID</button>
@@ -274,5 +276,15 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie.min.js" integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.querySelector('.lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'css/button.json'
+        });
+    </script>
 </body>
 </html>

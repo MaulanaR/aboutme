@@ -221,7 +221,7 @@ function setLanguage(lang) {
     document.getElementById('nav-experience').textContent = langData[lang].nav[1];
     document.getElementById('nav-skills').textContent = langData[lang].nav[2];
     document.getElementById('nav-projects').textContent = langData[lang].nav[3];
-    document.getElementById('nav-contact').textContent = langData[lang].nav[4];
+    // document.getElementById('nav-contact').textContent = langData[lang].nav[4];
 
     // Hero
     document.getElementById('hero-title').textContent = langData[lang].hero.title;
