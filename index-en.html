@@ -21,7 +21,9 @@
                     <li><a href="#experience" id="nav-experience">Experience</a></li>
                     <li><a href="#skills" id="nav-skills">Skills</a></li>
                     <li><a href="#projects" id="nav-projects">Projects</a></li>
-                    <li><a href="#contact" class="btn btn-primary" id="nav-contact">Contact</a></li>
+                    <li style="height: 60px !important;">
+                        <a href="#contact" class="lottie-container"></a>
+                    </li>
                 </ul>
                 <div class="lang-switch">
                     <button id="btn-id" class="btn-lang">ID</button>
@@ -249,7 +251,7 @@
                     <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="contact-link">
                         <i class="fab fa-linkedin"></i> <span id="contact-linkedin">LinkedIn</span>
                     </a>
-                     <a href="tel:+6285718816971" class="contact-link">
+                    <a href="https://api.whatsapp.com/send/?phone=6285718816971&text=Hi+saya+ingin+bekerjasama&type=phone_number&app_absent=0" class="contact-link">
                         <i class="fas fa-phone"></i> <span id="contact-phone">+62 857-1881-6971</span>
                     </a>
                 </div>
@@ -262,5 +264,15 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie.min.js" integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.querySelector('.lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'css/big_button.json'
+        });
+    </script>
 </body>
 </html>
