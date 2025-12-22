@@ -84,7 +84,7 @@ const langData = {
         hero: {
             title: "Maulana Rahman",
             role: "Backend Programmer",
-            summary: "Programmer Backend dengan pengalaman lebih dari 7 tahun menggunakan Golang dan PHP. Fokus pada kualitas kode, performa, dan keamanan aplikasi.",
+            summary: "Programmer Backend dengan pengalaman lebih dari 8 tahun menggunakan Golang dan PHP. Fokus pada kualitas kode, performa, dan keamanan aplikasi.",
             contact: "Hubungi Saya",
             linkedin: "Lihat di LinkedIn",
             github: "Lihat di Github"
@@ -152,7 +152,7 @@ const langData = {
         hero: {
             title: "Maulana Rahman",
             role: "Backend Programmer",
-            summary: "Backend Programmer with over 6 years of experience in Golang and PHP. Focused on code quality, performance, and application security.",
+            summary: "Backend Programmer with over 8 years of experience in Golang and PHP. Focused on code quality, performance, and application security.",
             contact: "Contact Me",
             linkedin: "View LinkedIn",
             github: "View Github"
