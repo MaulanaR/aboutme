@@ -86,7 +86,8 @@ const langData = {
             role: "Backend Programmer",
             summary: "Programmer Backend dengan pengalaman lebih dari 7 tahun menggunakan Golang dan PHP. Fokus pada kualitas kode, performa, dan keamanan aplikasi.",
             contact: "Hubungi Saya",
-            linkedin: "Lihat LinkedIn"
+            linkedin: "Lihat di LinkedIn",
+            github: "Lihat di Github"
         },
         about: {
             title: "Tentang Saya",
@@ -153,7 +154,8 @@ const langData = {
             role: "Backend Programmer",
             summary: "Backend Programmer with over 6 years of experience in Golang and PHP. Focused on code quality, performance, and application security.",
             contact: "Contact Me",
-            linkedin: "View LinkedIn"
+            linkedin: "View LinkedIn",
+            github: "View Github"
         },
         about: {
             title: "About Me",
@@ -229,6 +231,7 @@ function setLanguage(lang) {
     document.getElementById('hero-summary').textContent = langData[lang].hero.summary;
     document.getElementById('hero-contact').textContent = langData[lang].hero.contact;
     document.getElementById('hero-linkedin').textContent = langData[lang].hero.linkedin;
+    document.getElementById('hero-github').textContent = langData[lang].hero.github;
 
     // About
     document.getElementById('about-title').textContent = langData[lang].about.title;
