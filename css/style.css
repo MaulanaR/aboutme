@@ -494,19 +494,19 @@ section:nth-child(odd)::before {
 }
 
 .timeline-content {
-    padding: 30px;
+    padding: 35px;
     background: var(--white-color);
     background-image: var(--gloss-effect);
-    border: 4px solid var(--heading-color);
-    border-radius: 35px;
+    border: 5px solid var(--heading-color);
+    border-radius: 45px;
     position: relative;
-    box-shadow: 8px 8px 0px var(--primary-color), var(--squish-inner-shadow);
+    box-shadow: 12px 12px 0px var(--primary-color), var(--squish-inner-shadow);
     transition: var(--transition-bounce);
 }
 
 .timeline-item:hover .timeline-content {
-    box-shadow: 12px 12px 0px var(--primary-color);
-    transform: translate(-4px, -4px);
+    box-shadow: 18px 18px 0px var(--primary-color);
+    transform: translate(-6px, -6px) scale(1.02);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -701,20 +701,20 @@ section:nth-child(odd)::before {
 /* Education Section */
 .education-item {
     max-width: 800px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 50px auto;
     text-align: center;
-    padding: 40px;
-    border: 4px solid var(--heading-color);
-    border-radius: 40px;
+    padding: 50px;
+    border: 5px solid var(--heading-color);
+    border-radius: 50px;
     background: var(--white-color);
     background-image: var(--gloss-effect);
-    box-shadow: 10px 10px 0px var(--secondary-color), var(--squish-inner-shadow);
+    box-shadow: 15px 15px 0px var(--secondary-color), var(--squish-inner-shadow);
     transition: var(--transition-bounce);
 }
 
 .education-item:hover {
-    transform: scale(1.03);
-    box-shadow: 15px 15px 0px var(--secondary-color);
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 20px 20px 0px var(--secondary-color);
 }
 
 .education-item h3 { 

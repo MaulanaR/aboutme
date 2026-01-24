@@ -22,6 +22,9 @@
                     <li><a href="index-en.html#experience" id="nav-experience">Experience</a></li>
                     <li><a href="index-en.html#skills" id="nav-skills">Skills</a></li>
                     <li><a href="projects-en.html" class="active" id="nav-projects">Projects</a></li>
+                    <li style="height: 60px !important;">
+                        <a href="index-en.html#contact" class="lottie-container"></a>
+                    </li>
                 </ul>
                 <div class="lang-switch">
                     <button id="btn-id" class="btn-lang">ID</button>
@@ -202,5 +205,15 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie.min.js" integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.querySelector('.lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'css/big_button.json'
+        });
+    </script>
 </body>
 </html>
