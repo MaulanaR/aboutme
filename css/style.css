@@ -445,6 +445,57 @@ section:nth-child(odd)::before {
     letter-spacing: 1px;
 }
 
+/* Key Achievements */
+.key-achievements {
+    margin-top: 60px;
+    background: var(--white-color);
+    border: 4px solid var(--heading-color);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 10px 10px 0px var(--secondary-color);
+}
+
+.key-achievements h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.achieve-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.achieve-list li {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.03);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: var(--transition-bounce);
+}
+
+.achieve-list li:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+    background: var(--white-color);
+}
+
+.achieve-list i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
 @media (max-width: 768px) {
     .about-stats {
         flex-direction: column;
@@ -518,6 +569,102 @@ section:nth-child(odd)::before {
     }
     .philosophy-section {
         padding: 40px 20px;
+    }
+}
+
+/* Methodology Bar */
+.methodology-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    background: var(--heading-color);
+    border-radius: 30px;
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--heading-color);
+}
+
+.method-item {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.method-item i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .methodology-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Hire CTA Section */
+.hire-cta {
+    margin-top: 80px;
+    background: var(--white-color);
+    background-image: var(--gloss-effect);
+    border: 5px solid var(--heading-color);
+    border-radius: 50px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 15px 15px 0px var(--primary-color), var(--squish-inner-shadow);
+    transition: var(--transition-bounce);
+}
+
+.hire-cta:hover {
+    transform: scale(1.02);
+    box-shadow: 20px 20px 0px var(--primary-color);
+}
+
+.hire-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hire-content h3 {
+    font-size: 2.5rem;
+    font-weight: 950;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.hire-content p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.hire-cta .btn {
+    padding: 20px 40px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 992px) {
+    .hire-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    .hire-content {
+        text-align: center;
+    }
+    .hire-content h3 {
+        font-size: 2rem;
     }
 }
 

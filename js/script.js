@@ -321,6 +321,12 @@ function setLanguage(lang) {
         updateText('phi2-desc', "Membangun untuk hari ini dengan visi untuk masa depan.");
         updateText('phi3-title', "Test Driven");
         updateText('phi3-desc', "Kualitas dijamin melalui pengujian yang ketat dan otomatis.");
+
+        // Key Achievements
+        updateText('achieve-title', "Pencapaian Utama");
+        updateText('achieve-1', "Meningkatkan efisiensi pemrosesan data sebesar 40% untuk ekosistem Zahir.");
+        updateText('achieve-2', "Berhasil memigrasikan database skala nasional Bappenas tanpa downtime.");
+        updateText('achieve-3', "Merancang sistem kolaborasi pemerintah yang digunakan di seluruh provinsi Indonesia.");
     } else {
         updateText('high1-title', "Scalability");
         updateText('high1-desc', "System architecture ready to grow with millions of users.");
@@ -343,6 +349,12 @@ function setLanguage(lang) {
         updateText('phi2-desc', "Building for today with a vision for tomorrow.");
         updateText('phi3-title', "Test Driven");
         updateText('phi3-desc', "Quality guaranteed through rigorous automated testing.");
+
+        // Key Achievements
+        updateText('achieve-title', "Key Achievements");
+        updateText('achieve-1', "Increased data processing efficiency by 40% for the Zahir ecosystem.");
+        updateText('achieve-2', "Successfully migrated Bappenas national-scale database with zero downtime.");
+        updateText('achieve-3', "Architected government collaboration systems used across all Indonesian provinces.");
     }
 
     // Experience
