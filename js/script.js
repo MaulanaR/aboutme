@@ -137,7 +137,7 @@ const langData = {
         exp: {
             title: "Pengalaman Kerja",
             1: {
-                role: "Senior Backend Programmer",
+                role: "Senior Backend Engineer",
                 company: "PT. Zahir Internasional",
                 desc: "Memimpin pengembangan API inti untuk ekosistem Zahir (Accounting, HR, Inventory). Berhasil meningkatkan efisiensi pemrosesan data sebesar 40% dan mengintegrasikan sistem pembayaran pihak ketiga yang melayani ribuan bisnis UMKM di Asia Tenggara."
             },
@@ -147,7 +147,7 @@ const langData = {
                 desc: "Merancang arsitektur sistem PRADA untuk kolaborasi perencanaan nasional. Mengelola migrasi database skala besar tanpa downtime dan mengoptimalkan performa dashboard yang digunakan oleh seluruh Bappeda di Indonesia."
             },
             3: {
-                role: "Fullstack Web Programmer",
+                role: "Senior Fullstack Engineer",
                 company: "PT. Astech Alus Technology",
                 desc: "Membangun dan merancang solusi enterprise dari nol. Fokus pada pengembangan arsitektur yang modular dan skalabel menggunakan Laravel dan PHP modern, menghasilkan produk yang memangkas waktu operasional klien hingga 50%."
             }
