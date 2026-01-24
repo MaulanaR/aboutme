@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation();
 
     // Squishy Mouse Effect for Buttons and Cards
-    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper');
+    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper, .highlight-card');
     
     squishyElements.forEach(el => {
         el.addEventListener('mousemove', (e) => {
@@ -132,7 +132,7 @@ const langData = {
         },
         about: {
             title: "Tentang Saya",
-            desc: "Saya adalah seorang backend programmer yang berdedikasi dengan pengalaman dalam perancangan API, manajemen basis data, serta integrasi sistem pada berbagai aplikasi. Saya selalu bersemangat untuk mengikuti perkembangan teknologi terbaru dan menerapkannya untuk menciptakan solusi yang efisien dan andal."
+            desc: "Dengan pengalaman lebih dari 8 tahun, saya spesialis dalam membangun sistem backend yang tangguh dan berperforma tinggi untuk aplikasi skala besar. Mulai dari merancang API kompleks di Zahir Internasional hingga memodernisasi infrastruktur digital nasional untuk Bappenas RI, saya mengubah kebutuhan bisnis yang rumit menjadi kode yang skalabel. Saya tidak hanya menulis fungsi; saya membangun pondasi digital yang aman, efisien, dan siap menghadapi masa depan."
         },
         exp: {
             title: "Pengalaman Kerja",
@@ -200,7 +200,7 @@ const langData = {
         },
         about: {
             title: "About Me",
-            desc: "I am a dedicated backend programmer experienced in API design, database management, and system integration for various applications. I am always eager to keep up with the latest technology trends and apply them to create efficient and reliable solutions."
+            desc: "With over 8 years of experience, I specialize in building robust, high-performance backend systems that power large-scale applications. From architecting complex APIs at Zahir Internasional to modernizing national digital infrastructure for the Indonesian Government (Bappenas), I turn complex business requirements into scalable code. I don't just write functions; I build digital foundations that are secure, efficient, and ready for the future."
         },
         exp: {
             title: "Work Experience",
@@ -287,6 +287,23 @@ function setLanguage(lang) {
     // About
     updateText('about-title', langData[lang].about.title);
     updateText('about-desc', langData[lang].about.desc);
+
+    // About Highlights
+    if (lang === 'id') {
+        updateText('high1-title', "Skalabilitas");
+        updateText('high1-desc', "Arsitektur sistem yang siap tumbuh bersama jutaan pengguna.");
+        updateText('high2-title', "Keamanan");
+        updateText('high2-desc', "Prioritas utama pada integritas dan perlindungan data sensitif.");
+        updateText('high3-title', "Performa");
+        updateText('high3-desc', "Optimasi kode untuk latensi rendah dan throughput tinggi.");
+    } else {
+        updateText('high1-title', "Scalability");
+        updateText('high1-desc', "System architecture ready to grow with millions of users.");
+        updateText('high2-title', "Security");
+        updateText('high2-desc', "Top priority on data integrity and sensitive protection.");
+        updateText('high3-title', "Performance");
+        updateText('high3-desc', "Code optimization for low latency and high throughput.");
+    }
 
     // Experience
     updateText('exp-title', langData[lang].exp.title);
