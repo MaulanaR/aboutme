@@ -21,7 +21,7 @@
                     <li><a href="#about" id="nav-about">Tentang</a></li>
                     <li><a href="#experience" id="nav-experience">Pengalaman</a></li>
                     <li><a href="#skills" id="nav-skills">Keahlian</a></li>
-                    <li><a href="#projects" id="nav-projects">Proyek</a></li>
+                    <li><a href="projects.html" id="nav-projects">Proyek</a></li>
                     <li style="height: 60px !important;">
                         <a href="#contact" class="lottie-container"></a>
                     </li>
@@ -42,14 +42,14 @@
             <div class="container hero-content">
                 <div class="hero-text">
                     <h1 class="fade-in" id="hero-title">Maulana Rahman</h1>
-                    <p class="fade-in-delay-1" id="hero-role">Backend Programmer</p>
+                    <p class="hero-role fade-in-delay-1" id="hero-role">Backend Programmer</p>
                     <p class="hero-summary fade-in-delay-2" id="hero-summary">
                         Programmer Backend dengan pengalaman lebih dari 8 tahun menggunakan Golang dan PHP. Fokus pada kualitas kode, performa, dan keamanan aplikasi.
                     </p>
                     <div class="hero-buttons fade-in-delay-3">
-                        <a href="#contact" class="btn btn-sm btn-primary" id="hero-contact">Hubungi Saya</a>
-                        <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-sm btn-secondary" id="hero-linkedin">Lihat LinkedIn</a>
-                        <a href="https://github.com/MaulanaR" target="_blank" class="btn btn-sm btn-secondary" id="hero-github">View Github</a>
+                        <a href="#contact" class="btn btn-primary" id="hero-contact">Hubungi Saya</a>
+                        <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-secondary" id="hero-linkedin">Lihat LinkedIn</a>
+                        <a href="https://github.com/MaulanaR" target="_blank" class="btn btn-secondary" id="hero-github">View Github</a>
                     </div>
                 </div>
                 <div class="hero-image fade-in">
@@ -61,9 +61,11 @@
         <section id="about" class="section-bg">
             <div class="container animate-on-scroll">
                 <h2 class="section-title" id="about-title">Tentang Saya</h2>
-                <p class="section-subtitle" id="about-desc">
-                    Saya adalah seorang backend programmer yang berdedikasi dengan pengalaman dalam perancangan API, manajemen basis data, serta integrasi sistem pada berbagai aplikasi. Saya selalu bersemangat untuk mengikuti perkembangan teknologi terbaru dan menerapkannya untuk menciptakan solusi yang efisien dan andal.
-                </p>
+                <div class="section-subtitle-container">
+                    <p class="section-subtitle" id="about-desc">
+                        Saya adalah seorang backend programmer yang berdedikasi dengan pengalaman dalam perancangan API, manajemen basis data, serta integrasi sistem pada berbagai aplikasi. Saya selalu bersemangat untuk mengikuti perkembangan teknologi terbaru dan menerapkannya untuk menciptakan solusi yang efisien dan andal.
+                    </p>
+                </div>
             </div>
         </section>
         
@@ -139,98 +141,14 @@
 
         <section id="projects">
             <div class="container animate-on-scroll">
-                <h2 class="section-title" id="projects-title">Proyek</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-year">2024</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/prada.png" alt="PrADa Bappenas RI">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project1-title">PrADa (Bappenas RI)</h3>
-                            <p id="project1-desc">Platform kolaborasi perencanaan pembangunan daerah berbasis website.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2024</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/draisah.png" alt="Event Management Dr.Aisah Dahlan">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project2-title">Event Management Dr.Aisah Dahlan</h3>
-                            <p id="project2-desc">Sistem Event Management Dr.Aisah Dahlan.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2023</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/eoffice.png" alt="E-Office Pam Jaya DKI">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project3-title">E-Office Pam Jaya DKI (BE)</h3>
-                            <p id="project3-desc">Sistem manajemen dokumen dan arsip digital untuk Pam Jaya DKI.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2021</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/bappenas.png" alt="Website Bappenas RI">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project4-title">Website Bappenas RI</h3>
-                            <p id="project4-desc">Portal informasi resmi Kementerian PPN/Bappenas.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2020</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/tnde.png" alt="TNDE Pam Jaya DKI">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project5-title">TNDE Pam Jaya DKI</h3>
-                            <p id="project5-desc">Sistem tata naskah dinas elektronik untuk Pam Jaya DKI.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2020</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/solusi-pg.png" alt="SOLUSI">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project6-title">SOLUSI</h3>
-                            <p id="project6-desc">Sistem Operasional Layanan Usaha dan Sarana Promosi - Pemerintah Kota Bogor</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2020</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/megaplasa.png" alt="Megaplasa.com">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project7-title">Megaplasa.com</h3>
-                            <p id="project7-desc">Situs lelang online.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2019</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/askrindo.png" alt="Askrindo">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project8-title">Finance Report APP</h3>
-                            <p id="project8-desc">Finance Report APP – PT Asuransi Kredit Indonesia (Askrindo)</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-year">2016</div>
-                        <div class="project-image">
-                            <img src="assets/portofolio/tbm.png" alt="ERP TBM">
-                        </div>
-                        <div class="project-content">
-                            <h3 id="project9-title">ERP - Taman Buah Mekarsari</h3>
-                            <p id="project9-desc">ERP Pada Taman Buah Mekarsari (TBM)</p>
-                        </div>
-                    </div>
+                <h2 class="section-title" id="projects-title">Kisah Proyek</h2>
+                <div class="section-subtitle-container">
+                    <p class="section-subtitle">Dibalik setiap aplikasi, ada tantangan yang dipecahkan dan inovasi yang dibangun.</p>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="projects.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 20px 50px;">
+                        Baca Kisah Selengkapnya <i class="fas fa-arrow-right" style="margin-left: 15px;"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -254,7 +172,9 @@
         <section id="contact">
             <div class="container animate-on-scroll">
                 <h2 class="section-title" id="contact-title">Hubungi Saya</h2>
-                <p class="section-subtitle" id="contact-desc">Jangan ragu untuk menghubungi saya melalui email atau terhubung di LinkedIn.</p>
+                <div class="section-subtitle-container">
+                    <p class="section-subtitle" id="contact-desc">Jangan ragu untuk menghubungi saya melalui email atau terhubung di LinkedIn.</p>
+                </div>
                 <div class="contact-info">
                     <a href="mailto:maulana.code@gmail.com" class="contact-link">
                         <i class="fas fa-envelope"></i> <span id="contact-email">maulana.code@gmail.com</span>
@@ -272,7 +192,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Maulana Rahman. All rights reserved.</p>
+            <p>&copy; 2026 Maulana Rahman. All rights reserved.</p>
         </div>
     </footer>
 

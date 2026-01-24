@@ -1,0 +1,76 @@
+---
+description: Design system rules for Tactile Maximalism ("Squishy-uishy" UI) theme. Use these rules when adding new components or modifying the UI.
+globs: ["**/*.{html,css,js}"]
+---
+
+# Tactile Maximalism Design System ("Squishy-uishy")
+
+This design system focuses on rich textures, 3D-like depth, playful micro-interactions, and bold typography. Elements should feel physical, "squishy," and highly responsive to user interaction.
+
+## Core Design Tokens
+
+### Colors
+- **Primary (Coral Red):** `#ff6b6b` (Action elements, main highlights)
+- **Secondary (Turquoise):** `#4ecdc4` (Accents, complementary highlights)
+- **Border/Contrast (Yellow):** `#ffe66d` (Inner highlights, high-contrast borders)
+- **Background:** `#f7fff7` (Main surface)
+- **Heading/Ink:** `#1a1a1a` (Deep black for high-contrast strokes and shadows)
+- **White:** `#ffffff` (Card surfaces, clean backgrounds)
+
+### Typography
+- **Font Family:** 'Poppins', sans-serif.
+- **Maximalist Headlines:**
+  - Font weights: 900 or 950.
+  - `-webkit-text-stroke: 3px to 4px var(--heading-color)`.
+  - Heavy drop shadows: `text-shadow: 10px 10px 0px var(--heading-color)`.
+  - Massive sizes: `7rem` for hero, `5.5rem` for section titles.
+- **Subtitles/Body:** Bold weights (700-800), legible but high personality.
+
+### Tactile Properties
+- **Borders:** Thick solid borders (`4px to 5px`) using `--heading-color`.
+- **Corner Radius:** `--squish-radius: 35px` (Large, friendly, pill-like).
+- **Shadows:** 
+  - **Outer:** Hard, offset shadows (`10px 10px 0px var(--heading-color)`) instead of soft blurs.
+  - **Inner (Jelly Effect):** `inset 6px 6px 12px rgba(255,255,255,0.4), inset -6px -6px 12px rgba(0,0,0,0.1)`.
+- **Gloss Effect:** Use `var(--gloss-effect)` (135deg gradient) on top of solid colors to simulate high-gloss "jelly" or "clay" finishes.
+
+## Interaction Patterns
+
+### Squishy Mouse Effect (JS)
+All interactive elements (`.btn`, `.project-card`, `.skill-tag`, etc.) must implement the dynamic 3D tilt/scale effect:
+- Tilt based on cursor position relative to element center.
+- Scale up slightly (`1.08`) and translate (`-5px, -5px`) on hover.
+- Scale down (`0.95`) and reset translate on click (`mousedown`).
+
+### Animations
+- **Jelly Bounce:** Use `@keyframes jelly-bounce` for hover states on buttons.
+- **Floating:** Use `@keyframes float` for key visual imagery (e.g., hero photo).
+- **Fade-in:** Use bounce-based `cubic-bezier(0.68, -0.6, 0.32, 1.6)` for all transitions.
+
+## Component Guidelines
+
+1. **Buttons:**
+   - Always uppercase with 1px letter spacing.
+   - Must have the gloss effect and inner shadows.
+   - Use `jelly-bounce` animation on hover.
+
+2. **Cards (Project/Education):**
+   - White background with gloss effect.
+   - Heavy outer shadow (`10px 10px 0px var(--border-color)`).
+   - Dynamic zoom on child images inside cards.
+
+3. **Navigation:**
+   - Floating capsule design with glassmorphism (`backdrop-filter: blur(10px)`).
+   - Capsule links should scale and rotate slightly on hover.
+   - For sub-pages (e.g., Projects), provide a "Back Home" fixed button and full nav menu pointing to homepage anchors.
+
+4. **Storytelling Layout:**
+   - Use `.story-section` with alternating grid layouts (`1fr 1.2fr` and `1.2fr 1fr`).
+   - Images in `.story-image-wrapper` should have alternating rotations and heavy offset shadows.
+   - Use `.year-tag` for project timelines within stories.
+   - Text should be bold (`600-700` weight) and highly legible.
+
+## Performance & Accessibility
+- Maintain high contrast between text and background.
+- Ensure all `-webkit-text-stroke` and `text-shadow` combinations remain readable on smaller screens by adjusting sizes in media queries.
+- Keep `z-index` stack organized: Blobs (-1) -> Background (0) -> Content (1) -> Header (1000).

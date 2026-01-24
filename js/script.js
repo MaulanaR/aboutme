@@ -54,25 +54,66 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check on page load
     handleScrollAnimation();
 
+    // Squishy Mouse Effect for Buttons and Cards
+    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper');
+    
+    squishyElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / (rect.height / 10);
+            const rotateY = (centerX - x) / (rect.width / 10);
+            
+            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.08) translate(-5px, -5px)`;
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+        });
+
+        el.addEventListener('mousedown', () => {
+            el.style.transform = `perspective(1000px) scale(0.95) translate(2px, 2px)`;
+        });
+
+        el.addEventListener('mouseup', () => {
+            el.style.transform = `perspective(1000px) scale(1.05) translate(-4px, -4px)`;
+        });
+    });
+
     // Active Nav Link on Scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-menu a');
 
     window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 150) {
-                current = section.getAttribute('id');
-            }
-        });
+        // Only run scroll spy on pages with the main sections (home page)
+        if (document.getElementById('about')) {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
+            navLinks.forEach(link => {
+                // Don't remove active from the projects link if we are on projects page
+                const isProjectsPage = window.location.pathname.includes('projects');
+                const href = link.getAttribute('href');
+                
+                if (!isProjectsPage || !href.includes('projects')) {
+                    link.classList.remove('active');
+                }
+
+                if (href && href.includes(current) && current !== '') {
+                    link.classList.add('active');
+                }
+            });
+        }
     });
 
 });
@@ -117,7 +158,7 @@ const langData = {
             soft: "Soft Skills"
         },
         projects: {
-            title: "Proyek",
+            title: "Kisah Proyek",
             1: { title: "PrADa (Bappenas RI)", desc: "Platform kolaborasi perencanaan pembangunan daerah berbasis website." },
             2: { title: "Event Management Dr.Aisah Dahlan", desc: "Sistem Event Management Dr.Aisah Dahlan." },
             3: { title: "E-Office Pam Jaya DKI (BE)", desc: "Sistem manajemen dokumen dan arsip digital untuk Pam Jaya DKI." },
@@ -185,7 +226,7 @@ const langData = {
             soft: "Soft Skills"
         },
         projects: {
-            title: "Projects",
+            title: "Project Stories",
             1: { title: "PrADa (Bappenas RI)", desc: "Web-based regional development planning collaboration platform." },
             2: { title: "Event Management Dr.Aisah Dahlan", desc: "Event Management System for Dr.Aisah Dahlan." },
             3: { title: "E-Office Pam Jaya DKI (BE)", desc: "Document and digital archive management system for Pam Jaya DKI." },
@@ -218,66 +259,84 @@ const langData = {
 };
 
 function setLanguage(lang) {
+    const updateText = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    };
+
     // Nav
-    document.getElementById('nav-about').textContent = langData[lang].nav[0];
-    document.getElementById('nav-experience').textContent = langData[lang].nav[1];
-    document.getElementById('nav-skills').textContent = langData[lang].nav[2];
-    document.getElementById('nav-projects').textContent = langData[lang].nav[3];
-    // document.getElementById('nav-contact').textContent = langData[lang].nav[4];
+    updateText('nav-about', langData[lang].nav[0]);
+    updateText('nav-experience', langData[lang].nav[1]);
+    updateText('nav-skills', langData[lang].nav[2]);
+    updateText('nav-projects', langData[lang].nav[3]);
+    
+    // Update projects link href
+    const navProjects = document.getElementById('nav-projects');
+    if (navProjects) {
+        navProjects.setAttribute('href', lang === 'en' ? 'projects-en.html' : 'projects.html');
+    }
 
     // Hero
-    document.getElementById('hero-title').textContent = langData[lang].hero.title;
-    document.getElementById('hero-role').textContent = langData[lang].hero.role;
-    document.getElementById('hero-summary').textContent = langData[lang].hero.summary;
-    document.getElementById('hero-contact').textContent = langData[lang].hero.contact;
-    document.getElementById('hero-linkedin').textContent = langData[lang].hero.linkedin;
-    document.getElementById('hero-github').textContent = langData[lang].hero.github;
+    updateText('hero-title', langData[lang].hero.title);
+    updateText('hero-role', langData[lang].hero.role);
+    updateText('hero-summary', langData[lang].hero.summary);
+    updateText('hero-contact', langData[lang].hero.contact);
+    updateText('hero-linkedin', langData[lang].hero.linkedin);
+    updateText('hero-github', langData[lang].hero.github);
 
     // About
-    document.getElementById('about-title').textContent = langData[lang].about.title;
-    document.getElementById('about-desc').textContent = langData[lang].about.desc;
+    updateText('about-title', langData[lang].about.title);
+    updateText('about-desc', langData[lang].about.desc);
 
     // Experience
-    document.getElementById('exp-title').textContent = langData[lang].exp.title;
-    document.getElementById('exp1-role').textContent = langData[lang].exp[1].role;
-    document.getElementById('exp1-company').textContent = langData[lang].exp[1].company;
-    document.getElementById('exp1-desc').textContent = langData[lang].exp[1].desc;
-    document.getElementById('exp2-role').textContent = langData[lang].exp[2].role;
-    document.getElementById('exp2-company').textContent = langData[lang].exp[2].company;
-    document.getElementById('exp2-desc').textContent = langData[lang].exp[2].desc;
-    document.getElementById('exp3-role').textContent = langData[lang].exp[3].role;
-    document.getElementById('exp3-company').textContent = langData[lang].exp[3].company;
-    document.getElementById('exp3-desc').textContent = langData[lang].exp[3].desc;
+    updateText('exp-title', langData[lang].exp.title);
+    updateText('exp1-role', langData[lang].exp[1].role);
+    updateText('exp1-company', langData[lang].exp[1].company);
+    updateText('exp1-desc', langData[lang].exp[1].desc);
+    updateText('exp2-role', langData[lang].exp[2].role);
+    updateText('exp2-company', langData[lang].exp[2].company);
+    updateText('exp2-desc', langData[lang].exp[2].desc);
+    updateText('exp3-role', langData[lang].exp[3].role);
+    updateText('exp3-company', langData[lang].exp[3].company);
+    updateText('exp3-desc', langData[lang].exp[3].desc);
 
     // Skills
-    document.getElementById('skills-title').textContent = langData[lang].skills.title;
-    document.getElementById('skills-tech').textContent = langData[lang].skills.tech;
-    document.getElementById('skills-soft').textContent = langData[lang].skills.soft;
+    updateText('skills-title', langData[lang].skills.title);
+    updateText('skills-tech', langData[lang].skills.tech);
+    updateText('skills-soft', langData[lang].skills.soft);
 
     // Projects
-    document.getElementById('projects-title').textContent = langData[lang].projects.title;
+    const projectsTitle = document.getElementById('projects-title');
+    if (projectsTitle) {
+        projectsTitle.textContent = langData[lang].projects.title;
+    }
+
+    const projectsBtn = document.querySelector('#projects .btn');
+    if (projectsBtn) {
+        projectsBtn.setAttribute('href', lang === 'en' ? 'projects-en.html' : 'projects.html');
+        projectsBtn.innerHTML = lang === 'en' 
+            ? 'Read Full Stories <i class="fas fa-arrow-right" style="margin-left: 15px;"></i>' 
+            : 'Baca Kisah Selengkapnya <i class="fas fa-arrow-right" style="margin-left: 15px;"></i>';
+    }
+    
     for (let i = 1; i <= 9; i++) {
-        const titleEl = document.getElementById(`project${i}-title`);
-        const descEl = document.getElementById(`project${i}-desc`);
-        if (titleEl && descEl) {
-            titleEl.textContent = langData[lang].projects[i].title;
-            descEl.textContent = langData[lang].projects[i].desc;
-        }
+        updateText(`project${i}-title`, langData[lang].projects[i].title);
+        updateText(`project${i}-desc`, langData[lang].projects[i].desc);
     }
 
     // Education
-    document.getElementById('edu-title').textContent = langData[lang].edu.title;
-    document.getElementById('edu1-title').textContent = langData[lang].edu[1].title;
-    document.getElementById('edu1-desc').textContent = langData[lang].edu[1].desc;
-    document.getElementById('edu2-title').textContent = langData[lang].edu[2].title;
-    document.getElementById('edu2-desc').textContent = langData[lang].edu[2].desc;
+    updateText('edu-title', langData[lang].edu.title);
+    updateText('edu1-title', langData[lang].edu[1].title);
+    updateText('edu1-desc', langData[lang].edu[1].desc);
+    updateText('edu2-title', langData[lang].edu[2].title);
+    updateText('edu2-desc', langData[lang].edu[2].desc);
 
     // Contact
-    document.getElementById('contact-title').textContent = langData[lang].contact.title;
-    document.getElementById('contact-desc').textContent = langData[lang].contact.desc;
-    document.getElementById('contact-email').textContent = langData[lang].contact.email;
-    document.getElementById('contact-linkedin').textContent = langData[lang].contact.linkedin;
-    document.getElementById('contact-phone').textContent = langData[lang].contact.phone;
+    updateText('contact-title', langData[lang].contact.title);
+    updateText('contact-desc', langData[lang].contact.desc);
+    updateText('contact-email', langData[lang].contact.email);
+    updateText('contact-linkedin', langData[lang].contact.linkedin);
+    updateText('contact-phone', langData[lang].contact.phone);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -285,16 +344,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnEn = document.getElementById('btn-en');
     if (btnId && btnEn) {
         btnId.addEventListener('click', function() {
+            if (window.location.pathname.includes('projects-en.html')) {
+                window.location.href = 'projects.html';
+                return;
+            }
             setLanguage('id');
             btnId.classList.add('active');
             btnEn.classList.remove('active');
         });
         btnEn.addEventListener('click', function() {
+            if (window.location.pathname.includes('projects.html') && !window.location.pathname.includes('projects-en.html')) {
+                window.location.href = 'projects-en.html';
+                return;
+            }
             setLanguage('en');
             btnEn.classList.add('active');
             btnId.classList.remove('active');
         });
     }
-    // Default language
-    setLanguage('id');
+    // Default language detection
+    const initialLang = document.documentElement.lang === 'en' ? 'en' : 'id';
+    setLanguage(initialLang);
+    if (initialLang === 'en') {
+        btnEn.classList.add('active');
+        btnId.classList.remove('active');
+    } else {
+        btnId.classList.add('active');
+        btnEn.classList.remove('active');
+    }
 });
