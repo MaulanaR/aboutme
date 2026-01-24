@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation();
 
     // Squishy Mouse Effect for Buttons and Cards
-    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper, .highlight-card');
+    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper, .highlight-card, .stat-item');
     
     squishyElements.forEach(el => {
         el.addEventListener('mousemove', (e) => {
@@ -296,6 +296,12 @@ function setLanguage(lang) {
         updateText('high2-desc', "Prioritas utama pada integritas dan perlindungan data sensitif.");
         updateText('high3-title', "Performa");
         updateText('high3-desc', "Optimasi kode untuk latensi rendah dan throughput tinggi.");
+        
+        // About Stats
+        updateText('stat-exp', "Tahun Pengalaman");
+        updateText('stat-proj', "Proyek Selesai");
+        updateText('stat-focus', "Backend Focus");
+        updateText('btn-cv', "Unduh CV Lengkap");
     } else {
         updateText('high1-title', "Scalability");
         updateText('high1-desc', "System architecture ready to grow with millions of users.");
@@ -303,6 +309,12 @@ function setLanguage(lang) {
         updateText('high2-desc', "Top priority on data integrity and sensitive protection.");
         updateText('high3-title', "Performance");
         updateText('high3-desc', "Code optimization for low latency and high throughput.");
+
+        // About Stats
+        updateText('stat-exp', "Years Experience");
+        updateText('stat-proj', "Projects Completed");
+        updateText('stat-focus', "Backend Focus");
+        updateText('btn-cv', "Download Full CV");
     }
 
     // Experience

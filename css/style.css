@@ -376,6 +376,53 @@ section:nth-child(odd)::before {
     }
 }
 
+/* About Stats Bar */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 80px;
+    padding: 40px;
+    background: var(--heading-color);
+    border-radius: 50px;
+    border: 5px solid var(--border-color);
+    box-shadow: 15px 15px 0px var(--heading-color);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 950;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 5px;
+    -webkit-text-stroke: 1.5px var(--white-color);
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .about-stats {
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 40px;
+        padding: 30px;
+    }
+    .stat-number {
+        font-size: 2.8rem;
+    }
+}
+
 .skill {
     min-height: calc(20vh - 210px);
     display: flex;
