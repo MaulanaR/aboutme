@@ -233,6 +233,27 @@ nav .container {
     box-shadow: var(--squish-shadow), var(--squish-inner-shadow);
 }
 
+/* Lottie Container in Nav */
+.lottie-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white-color);
+    border-radius: 50%;
+    border: 3px solid var(--heading-color);
+    box-shadow: 4px 4px 0px var(--heading-color);
+    transition: var(--transition-bounce);
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+.lottie-container:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 6px 6px 0px var(--heading-color);
+}
+
 /* General Section Styling */
 section {
     padding: 120px 0;
@@ -963,7 +984,17 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    header { margin: 10px; top: 10px; }
+    header { 
+        margin: 10px auto; 
+        top: 10px; 
+        max-width: 95%;
+    }
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+    .lottie-container {
+        display: none;
+    }
     .section-title { font-size: 2.8rem; letter-spacing: -1px; -webkit-text-stroke: 2px var(--heading-color); text-shadow: 6px 6px 0px var(--heading-color); }
     .section-subtitle { font-size: 1.1rem; padding: 8px 20px; }
     
