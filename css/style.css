@@ -321,7 +321,35 @@ section:nth-child(odd)::before {
 
 .section-subtitle-container {
     text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Specialization Bar */
+.specialization-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 60px;
+}
+
+.spec-item {
+    background: var(--heading-color);
+    color: var(--white-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 0px var(--primary-color);
+    transition: var(--transition-bounce);
+}
+
+.spec-item:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--primary-color);
+    box-shadow: 6px 6px 0px var(--heading-color);
 }
 
 /* About Highlights Grid */
