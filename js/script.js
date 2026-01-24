@@ -269,6 +269,7 @@ function setLanguage(lang) {
     updateText('nav-experience', langData[lang].nav[1]);
     updateText('nav-skills', langData[lang].nav[2]);
     updateText('nav-projects', langData[lang].nav[3]);
+    updateText('nav-contact', langData[lang].nav[4]);
     
     // Update projects link href
     const navProjects = document.getElementById('nav-projects');
@@ -298,6 +299,21 @@ function setLanguage(lang) {
     specItems.forEach((item, index) => {
         if (specData[lang][index]) item.textContent = specData[lang][index];
     });
+
+    // Methodology Bar
+    const methodItems = document.querySelectorAll('.methodology-bar .method-item span');
+    const methodData = {
+        id: ["Agile/Scrum", "Gitflow", "TDD/Unit Test", "CI/CD Pipelines"],
+        en: ["Agile/Scrum", "Gitflow", "TDD/Unit Test", "CI/CD Pipelines"]
+    };
+    methodItems.forEach((item, index) => {
+        if (methodData[lang][index]) item.textContent = methodData[lang][index];
+    });
+
+    // Hire CTA
+    updateText('hire-title', lang === 'id' ? "Mencari Backend Lead?" : "Looking for a Backend Lead?");
+    updateText('hire-desc', lang === 'id' ? "Saya siap membantu Anda membangun sistem yang skalabel dan aman. Mari bicarakan bagaimana saya bisa memberikan nilai bagi tim Anda." : "I am ready to help you build scalable and secure systems. Let's talk about how I can bring value to your team.");
+    updateText('hire-btn', lang === 'id' ? "Mulai Kolaborasi" : "Start Collaboration");
 
     // About Highlights
     if (lang === 'id') {
