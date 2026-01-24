@@ -1073,6 +1073,19 @@ footer p {
     margin-bottom: 20px;
 }
 
+.story-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.story-tech-stack .skill-tag {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background: var(--border-color);
+    box-shadow: 4px 4px 0px var(--heading-color);
+}
+
 .back-home {
     position: fixed;
     bottom: 50px;
