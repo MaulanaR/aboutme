@@ -277,6 +277,7 @@ function setLanguage(lang) {
     }
 
     // Hero
+    updateText('hero-status', lang === 'id' ? "Tersedia untuk Proyek Strategis" : "Available for Strategic Projects");
     updateText('hero-title', langData[lang].hero.title);
     updateText('hero-role', langData[lang].hero.role);
     updateText('hero-summary', langData[lang].hero.summary);
