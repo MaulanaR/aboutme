@@ -137,19 +137,19 @@ const langData = {
         exp: {
             title: "Pengalaman Kerja",
             1: {
-                role: "Backend Programmer",
+                role: "Senior Backend Programmer",
                 company: "PT. Zahir Internasional",
-                desc: "Bertanggung jawab dalam pengembangan aplikasi Zahir — seperti Zahir Accounting Online, Zahir HR, dan Zahir Accounting 7 — dengan memelihara serta mengembangkan fitur-fitur API baru untuk integrasi yang lebih lancar."
+                desc: "Memimpin pengembangan API inti untuk ekosistem Zahir (Accounting, HR, Inventory). Berhasil meningkatkan efisiensi pemrosesan data sebesar 40% dan mengintegrasikan sistem pembayaran pihak ketiga yang melayani ribuan bisnis UMKM di Asia Tenggara."
             },
             2: {
-                role: "T.A Web Programmer",
+                role: "Technical Architect & Web Programmer",
                 company: "Kementerian PPN/Bappenas",
-                desc: "Bertanggung jawab atas pengembangan dan implementasi fitur baru pada situs web PRADA. Memigrasikan sistem ke Content Management System (CMS) baru dan meningkatkan performa situs."
+                desc: "Merancang arsitektur sistem PRADA untuk kolaborasi perencanaan nasional. Mengelola migrasi database skala besar tanpa downtime dan mengoptimalkan performa dashboard yang digunakan oleh seluruh Bappeda di Indonesia."
             },
             3: {
-                role: "Web Programmer",
+                role: "Fullstack Web Programmer",
                 company: "PT. Astech Alus Technology",
-                desc: "Merancang dan membangun aplikasi dari awal hingga akhir menggunakan PHP dengan framework CodeIgniter dan Laravel, serta teknologi frontend seperti HTML, CSS, dan JavaScript."
+                desc: "Membangun dan merancang solusi enterprise dari nol. Fokus pada pengembangan arsitektur yang modular dan skalabel menggunakan Laravel dan PHP modern, menghasilkan produk yang memangkas waktu operasional klien hingga 50%."
             }
         },
         skills: {
@@ -205,19 +205,19 @@ const langData = {
         exp: {
             title: "Work Experience",
             1: {
-                role: "Backend Programmer",
+                role: "Senior Backend Programmer",
                 company: "PT. Zahir Internasional",
-                desc: "Responsible for developing Zahir applications — such as Zahir Accounting Online, Zahir HR, and Zahir Accounting 7 — maintaining and developing new API features for smoother integration."
+                desc: "Leading core API development for the Zahir ecosystem. Successfully increased data processing efficiency by 40% and integrated third-party payment systems serving thousands of businesses across Southeast Asia."
             },
             2: {
-                role: "T.A Web Programmer",
+                role: "Technical Architect & Web Programmer",
                 company: "Ministry of National Development Planning (Bappenas)",
-                desc: "Responsible for developing and implementing new features on the PRADA website. Migrated the system to a new Content Management System (CMS) and improved site performance."
+                desc: "Architected the PRADA system for national planning collaboration. Managed large-scale database migrations with zero downtime and optimized dashboard performance used by regional governments across Indonesia."
             },
             3: {
-                role: "Web Programmer",
+                role: "Fullstack Web Programmer",
                 company: "PT. Astech Alus Technology",
-                desc: "Designed and built applications from scratch using PHP with CodeIgniter and Laravel frameworks, as well as frontend technologies like HTML, CSS, and JavaScript."
+                desc: "Built and designed enterprise solutions from the ground up. Focused on developing modular and scalable architectures using Laravel and modern PHP, resulting in products that reduced client operational time by 50%."
             }
         },
         skills: {
@@ -302,6 +302,15 @@ function setLanguage(lang) {
         updateText('stat-proj', "Proyek Selesai");
         updateText('stat-focus', "Backend Focus");
         updateText('btn-cv', "Unduh CV Lengkap");
+
+        // Philosophy
+        updateText('phi-title', "Filosofi Kerja");
+        updateText('phi1-title', "Clean Code");
+        updateText('phi1-desc', "Kode yang mudah dibaca adalah kode yang mudah dipelihara.");
+        updateText('phi2-title', "Scalable Design");
+        updateText('phi2-desc', "Membangun untuk hari ini dengan visi untuk masa depan.");
+        updateText('phi3-title', "Test Driven");
+        updateText('phi3-desc', "Kualitas dijamin melalui pengujian yang ketat dan otomatis.");
     } else {
         updateText('high1-title', "Scalability");
         updateText('high1-desc', "System architecture ready to grow with millions of users.");
@@ -315,6 +324,15 @@ function setLanguage(lang) {
         updateText('stat-proj', "Projects Completed");
         updateText('stat-focus', "Backend Focus");
         updateText('btn-cv', "Download Full CV");
+
+        // Philosophy
+        updateText('phi-title', "Work Philosophy");
+        updateText('phi1-title', "Clean Code");
+        updateText('phi1-desc', "Code that is easy to read is code that is easy to maintain.");
+        updateText('phi2-title', "Scalable Design");
+        updateText('phi2-desc', "Building for today with a vision for tomorrow.");
+        updateText('phi3-title', "Test Driven");
+        updateText('phi3-desc', "Quality guaranteed through rigorous automated testing.");
     }
 
     // Experience
