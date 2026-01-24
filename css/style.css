@@ -336,20 +336,26 @@ section:nth-child(odd)::before {
 .spec-item {
     background: var(--heading-color);
     color: var(--white-color);
-    padding: 8px 20px;
+    padding: 10px 25px;
     border-radius: 50px;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 4px 4px 0px var(--primary-color);
+    box-shadow: 6px 6px 0px var(--primary-color), var(--squish-inner-shadow);
     transition: var(--transition-bounce);
+    border: 3px solid var(--heading-color);
 }
 
 .spec-item:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-5px) scale(1.08) rotate(1deg);
     background: var(--primary-color);
-    box-shadow: 6px 6px 0px var(--heading-color);
+    box-shadow: 10px 10px 0px var(--heading-color);
+}
+
+.spec-item span {
+    position: relative;
+    z-index: 1;
 }
 
 /* About Highlights Grid */

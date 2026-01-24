@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation();
 
     // Squishy Mouse Effect for Buttons and Cards
-    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper, .highlight-card, .stat-item');
+    const squishyElements = document.querySelectorAll('.btn, .project-card, .skill-tag, .education-item, .contact-link, .nav-menu a, .btn-lang, .nav-logo, .timeline-dot, .story-image-wrapper, .highlight-card, .stat-item, .spec-item');
     
     squishyElements.forEach(el => {
         el.addEventListener('mousemove', (e) => {
@@ -287,6 +287,16 @@ function setLanguage(lang) {
     // About
     updateText('about-title', langData[lang].about.title);
     updateText('about-desc', langData[lang].about.desc);
+
+    // Specialization Bar
+    const specItems = document.querySelectorAll('.specialization-bar .spec-item span');
+    const specData = {
+        id: ["Microservices", "RESTful API", "Optimasi Database", "Arsitektur Sistem", "Infrastruktur Cloud"],
+        en: ["Microservices", "RESTful API", "Database Optimization", "System Architecture", "Cloud Infrastructure"]
+    };
+    specItems.forEach((item, index) => {
+        if (specData[lang][index]) item.textContent = specData[lang][index];
+    });
 
     // About Highlights
     if (lang === 'id') {
