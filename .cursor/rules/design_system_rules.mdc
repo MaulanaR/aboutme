@@ -60,8 +60,9 @@ All interactive elements (`.btn`, `.project-card`, `.skill-tag`, etc.) must impl
    - Dynamic zoom on child images inside cards.
 
 3. **Navigation:**
-   - Floating capsule design with glassmorphism (`backdrop-filter: blur(10px)`).
-   - Capsule links should scale and rotate slightly on hover.
+   - Volumetric capsule design: `header` is a 3D-feeling bar with `inset` shadows and heavy 4px borders.
+   - Puffy Links: Nav links use `border-radius: 30px` and individual gloss effects when active/hovered.
+   - Tactile Language Switcher: Uses a recessed "well" design (`inset` shadow) with puffy toggle buttons.
    - For sub-pages (e.g., Projects), provide a "Back Home" fixed button and full nav menu pointing to homepage anchors.
 
 4. **Storytelling Layout:**
