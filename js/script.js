@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Dual language switcher
 const langData = {
     id: {
-        nav: ["Tentang", "Pengalaman", "Keahlian", "Proyek", "Kontak"],
+        nav: ["Tentang", "Pengalaman", "Keahlian", "Proyek", "Produk", "Kontak"],
         hero: {
             title: "Maulana Rahman",
             role: "Senior Backend Engineer",
@@ -189,7 +189,7 @@ const langData = {
         }
     },
     en: {
-        nav: ["About", "Experience", "Skills", "Projects", "Contact"],
+        nav: ["About", "Experience", "Skills", "Projects", "Products", "Contact"],
         hero: {
             title: "Maulana Rahman",
             role: "Senior Backend Engineer",
@@ -269,12 +269,36 @@ function setLanguage(lang) {
     updateText('nav-experience', langData[lang].nav[1]);
     updateText('nav-skills', langData[lang].nav[2]);
     updateText('nav-projects', langData[lang].nav[3]);
-    updateText('nav-contact', langData[lang].nav[4]);
+    updateText('nav-products', langData[lang].nav[4]);
+    updateText('nav-contact', langData[lang].nav[5]);
+    
+    // Update all nav links href based on current page and language
+    const isMainPage = !window.location.pathname.includes('projects') && !window.location.pathname.includes('products');
+    const langSuffix = lang === 'en' ? '-en' : '';
+    const indexPage = lang === 'en' ? 'index-en.html' : 'index.html';
+
+    const updateNavLink = (id, anchor) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.setAttribute('href', isMainPage ? anchor : `${indexPage}${anchor}`);
+        }
+    };
+
+    updateNavLink('nav-about', '#about');
+    updateNavLink('nav-experience', '#experience');
+    updateNavLink('nav-skills', '#skills');
+    updateNavLink('nav-contact', '#contact');
     
     // Update projects link href
     const navProjects = document.getElementById('nav-projects');
     if (navProjects) {
         navProjects.setAttribute('href', lang === 'en' ? 'projects-en.html' : 'projects.html');
+    }
+
+    // Update products link href
+    const navProducts = document.getElementById('nav-products');
+    if (navProducts) {
+        navProducts.setAttribute('href', lang === 'en' ? 'products-en.html' : 'products.html');
     }
 
     // Hero
@@ -410,6 +434,17 @@ function setLanguage(lang) {
         updateText(`project${i}-desc`, langData[lang].projects[i].desc);
     }
 
+    // Products Home
+    updateText('products-title-home', lang === 'id' ? "Produk Unggulan" : "Featured Products");
+    updateText('products-subtitle-home', lang === 'id' ? "Inovasi digital yang saya kembangkan untuk solusi masa depan." : "Digital innovations I developed for future solutions.");
+    const productsBtnHome = document.getElementById('products-btn-home');
+    if (productsBtnHome) {
+        productsBtnHome.setAttribute('href', lang === 'en' ? 'products-en.html' : 'products.html');
+        productsBtnHome.innerHTML = lang === 'en' 
+            ? 'View All Products <i class="fas fa-rocket" style="margin-left: 15px;"></i>' 
+            : 'Lihat Semua Produk <i class="fas fa-rocket" style="margin-left: 15px;"></i>';
+    }
+
     // Education
     updateText('edu-title', langData[lang].edu.title);
     updateText('edu1-title', langData[lang].edu[1].title);
@@ -434,6 +469,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = 'projects.html';
                 return;
             }
+            if (window.location.pathname.includes('products-en.html')) {
+                window.location.href = 'products.html';
+                return;
+            }
             setLanguage('id');
             btnId.classList.add('active');
             btnEn.classList.remove('active');
@@ -441,6 +480,10 @@ document.addEventListener('DOMContentLoaded', function() {
         btnEn.addEventListener('click', function() {
             if (window.location.pathname.includes('projects.html') && !window.location.pathname.includes('projects-en.html')) {
                 window.location.href = 'projects-en.html';
+                return;
+            }
+            if (window.location.pathname.includes('products.html') && !window.location.pathname.includes('products-en.html')) {
+                window.location.href = 'products-en.html';
                 return;
             }
             setLanguage('en');
