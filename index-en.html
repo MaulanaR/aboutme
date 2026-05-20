@@ -4,347 +4,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maulana Rahman - Senior Backend Engineer</title>
+    <title>Maulana Rahman - Backend Systems Architect</title>
     <meta name="description"
-        content="Personal portfolio of Maulana Rahman, a Senior Backend Engineer with over 8 years of experience building national-scale digital infrastructure and enterprise ecosystems.">
-    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+        content="Portfolio of Maulana Rahman, a backend systems architect focused on scalable APIs, Go, PHP, system design, and reliable data platforms.">
+    <link rel="stylesheet" href="css/style.css?v=2.0.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ve90w8nvrl");
     </script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#hero" class="nav-logo" id="nav-logo"><img src="assets/logo.png" alt="Maulana Rahman"></a>
-                <ul class="nav-menu">
-                    <li><a href="#about" id="nav-about">About</a></li>
-                    <li><a href="#experience" id="nav-experience">Experience</a></li>
-                    <li><a href="#skills" id="nav-skills">Skills</a></li>
-                    <li><a href="projects-en.html" id="nav-projects">Projects</a></li>
-                    <li><a href="products-en.html" id="nav-products">Products</a></li>
-                    <li><a href="#contact" id="nav-contact">Contact</a></li>
-                </ul>
-                <div class="lang-switch">
-                    <button id="btn-id" class="btn-lang">ID</button>
-                    <button id="btn-en" class="btn-lang active">EN</button>
+    <header class="site-header">
+        <nav class="container nav-shell" aria-label="Main navigation">
+            <a href="#hero" class="nav-logo" id="nav-logo" aria-label="Maulana Rahman home">
+                <span>Maulana Rahman</span>
+                <i aria-hidden="true"></i>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" id="nav-about">About</a></li>
+                <li><a href="#experience" id="nav-experience">Experience</a></li>
+                <li><a href="#skills" id="nav-skills">Skills</a></li>
+                <li><a href="projects-en.html" id="nav-projects">Projects</a></li>
+                <li><a href="products-en.html" id="nav-products">Products</a></li>
+                <li><a href="#contact" id="nav-contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switch" aria-label="Language switcher">
+                    <button id="btn-id" class="btn-lang" type="button">ID</button>
+                    <button id="btn-en" class="btn-lang active" type="button">EN</button>
                 </div>
-                <button class="nav-toggle" aria-label="Open navigation">
+                <button class="nav-toggle" type="button" aria-label="Open navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
     </header>
+
     <main>
         <section id="hero" class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <div class="status-badge fade-in">
-                        <span class="status-dot"></span> <span id="hero-status">Available for Strategic Projects</span>
-                    </div>
-                    <h1 class="fade-in" id="hero-title">Maulana Rahman</h1>
-                    <p class="hero-role fade-in-delay-1" id="hero-role">Senior Backend Engineer</p>
-                    <p class="hero-summary fade-in-delay-2" id="hero-summary">
-                        Transforming complex business logic into high-performance, scalable backend systems. Specialist
-                        in Golang & PHP with an 8+ year track record of building national-scale digital infrastructure.
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>Maulana Rahman</h1>
+                    <p class="hero-role">Backend <span>Systems Architect</span></p>
+                    <p class="hero-summary">
+                        I design, build, and refine scalable backend systems, APIs, and data platforms that keep
+                        business-critical applications reliable under real workloads.
                     </p>
-                    <div class="hero-buttons fade-in-delay-3">
-                        <a href="#contact" class="btn btn-primary" id="hero-contact">Contact Me</a>
-                        <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-secondary"
-                            id="hero-linkedin">View LinkedIn</a>
-                        <a href="https://github.com/MaulanaR" target="_blank" class="btn btn-secondary"
-                            id="hero-github">View Github</a>
+                    <div class="hero-buttons">
+                        <a href="projects-en.html" class="btn btn-primary">View Projects <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Contact <i class="fas fa-arrow-right"></i></a>
+                        <a href="assets/Maulana-Rahman-CV-2026.pdf" class="btn btn-ghost" target="_blank">Download CV</a>
                     </div>
                 </div>
-                <div class="hero-image fade-in">
-                    <img src="assets/maulana-rahman.png" alt="Photo of Maulana Rahman">
+
+                <div class="system-map" aria-hidden="true">
+                    <div class="map-node node-api">API Gateway</div>
+                    <div class="map-node node-service">Services</div>
+                    <div class="map-node node-db">Database</div>
+                    <div class="map-line line-a"></div>
+                    <div class="map-line line-b"></div>
+                    <div class="server-stack">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <aside class="profile-panel" aria-label="Profile summary">
+                    <div class="portrait-frame">
+                        <img src="assets/maulana-rahman-professional.png" alt="Photo of Maulana Rahman">
+                    </div>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-location-dot"></i> West Java, Indonesia</span>
+                        <span><i class="fas fa-envelope"></i> maulana.code@gmail.com</span>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="container stat-rail" aria-label="Professional highlights">
+                <div>
+                    <i class="fas fa-calendar-days"></i>
+                    <strong>10+</strong>
+                    <span>Years of Experience</span>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <strong>Go / PHP</strong>
+                    <span>Primary Languages</span>
+                </div>
+                <div>
+                    <i class="fas fa-building-columns"></i>
+                    <strong>National-scale</strong>
+                    <span>Systems & Platforms</span>
                 </div>
             </div>
         </section>
-        <section id="about" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="about-title">About Me</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="about-desc">
-                        With over 8 years of experience, I specialize in building robust, high-performance backend
-                        systems that power large-scale applications. From creating complex APIs at Zahir
-                        Internasional to modernizing national digital infrastructure for the Indonesian Government
-                        (Bappenas), I turn complex business requirements into scalable code. I don't just write
-                        functions; I build digital foundations that are secure, efficient, and ready for the future.
+
+        <section id="about" class="section section-compact">
+            <div class="container two-column">
+                <div>
+                    <p class="section-kicker">Profile</p>
+                    <h2 class="section-title">Server-side architecture for systems that need to last.</h2>
+                </div>
+                <div class="lead-copy">
+                    <p>
+                        My work centers on backend architecture, clean API contracts, database performance, service
+                        integration, and maintainable business logic. I combine Go and PHP experience with a practical
+                        understanding of distributed systems, security, documentation, and cross-team delivery.
                     </p>
-                </div>
-
-                <div class="specialization-bar">
-                    <div class="spec-item"><span>Microservices</span></div>
-                    <div class="spec-item"><span>RESTful API</span></div>
-                    <div class="spec-item"><span>Database Optimization</span></div>
-                    <div class="spec-item"><span>System Architecture</span></div>
-                    <div class="spec-item"><span>Cloud Infrastructure</span></div>
-                </div>
-
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <i class="fas fa-rocket"></i>
-                        <h3 id="high1-title">Scalability</h3>
-                        <p id="high1-desc">System architecture ready to grow with millions of users.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3 id="high2-title">Security</h3>
-                        <p id="high2-desc">Top priority on data integrity and sensitive protection.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-bolt"></i>
-                        <h3 id="high3-title">Performance</h3>
-                        <p id="high3-desc">Code optimization for low latency and high throughput.</p>
-                    </div>
-                </div>
-
-                <div class="key-achievements animate-on-scroll">
-                    <h3 id="achieve-title">Key Achievements</h3>
-                    <ul class="achieve-list">
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-1">Increased data processing
-                                efficiency by 40% for the Zahir ecosystem.</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-2">Successfully migrated Bappenas
-                                national-scale database with zero downtime.</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-3">Architected government
-                                collaboration systems used across all Indonesian provinces.</span></li>
-                    </ul>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label" id="stat-exp">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label" id="stat-proj">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label" id="stat-focus">Backend Focus</span>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 60px;">
-                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-secondary"
-                        style="padding: 15px 40px; font-size: 1.1rem;">
-                        <i class="fas fa-file-download" style="margin-right: 10px;"></i> <span id="btn-cv">Download Full
-                            CV</span>
-                    </a>
-                </div>
-
-                <div class="philosophy-section animate-on-scroll">
-                    <h3 class="philosophy-title" id="phi-title">Work Philosophy</h3>
-                    <div class="philosophy-grid">
-                        <div class="phi-item">
-                            <span class="phi-icon">💎</span>
-                            <h4 id="phi1-title">Clean Code</h4>
-                            <p id="phi1-desc">Code that is easy to read is code that is easy to maintain.</p>
-                        </div>
-                        <div class="phi-item">
-                            <span class="phi-icon">🏗️</span>
-                            <h4 id="phi2-title">Scalable Design</h4>
-                            <p id="phi2-desc">Building for today with a vision for tomorrow.</p>
-                        </div>
-                        <div class="phi-item">
-                            <span class="phi-icon">🧪</span>
-                            <h4 id="phi3-title">Test Driven</h4>
-                            <p id="phi3-desc">Quality guaranteed through rigorous automated testing.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="methodology-bar animate-on-scroll">
-                    <div class="method-item"><i class="fas fa-sync-alt"></i> <span>Agile/Scrum</span></div>
-                    <div class="method-item"><i class="fas fa-code-branch"></i> <span>Gitflow</span></div>
-                    <div class="method-item"><i class="fas fa-vial"></i> <span>TDD/Unit Test</span></div>
-                    <div class="method-item"><i class="fas fa-server"></i> <span>CI/CD Pipelines</span></div>
-                </div>
-
-                <div class="hire-cta animate-on-scroll">
-                    <div class="hire-content">
-                        <h3 id="hire-title">Looking for a Backend Lead/Team?</h3>
-                        <p id="hire-desc">I am ready to help you build scalable and secure systems. Let's talk about how
-                            I can bring value to your team.</p>
-                    </div>
-                    <a href="#contact" class="btn btn-primary" id="hire-btn">Start Collaboration <i
-                            class="fas fa-comment-dots"></i></a>
+                    <p>
+                        I enjoy turning complex technical problems into stable, elegant systems that are easier to
+                        operate, scale, and improve over time.
+                    </p>
                 </div>
             </div>
         </section>
-        <section id="experience">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="exp-title">Work Experience</h2>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Experience</p>
+                    <h2 class="section-title">Backend delivery across enterprise, government, and product teams.</h2>
+                </div>
                 <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2021 - Present</div>
-                        <div class="timeline-content">
-                            <h3 id="exp1-role">Senior Backend Engineer</h3>
-                            <p class="company" id="exp1-company">PT. Zahir Internasional</p>
-                            <p id="exp1-desc">Core Team API development for the Zahir ecosystem (Accounting, HR,
-                                Inventory). Successfully increased data processing efficiency by 40% and integrated
-                                third-party payment systems serving thousands of businesses across Southeast Asia.</p>
+                    <article class="timeline-item">
+                        <time>Oct 2021 - Present</time>
+                        <div>
+                            <h3>Back End Developer</h3>
+                            <p class="company">PT Zahir Internasional</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2017-2020, Jun - Dec 2023, Jun - Dec 2024</div>
-                        <div class="timeline-content">
-                            <h3 id="exp2-role">Technical Architect & Web Programmer</h3>
-                            <p class="company" id="exp2-company">Ministry of National Development Planning (Bappenas)
-                            </p>
-                            <p id="exp2-desc">Architected the PRADA system for national planning collaboration. Managed
-                                large-scale database migrations with zero downtime and optimized dashboard performance
-                                used by regional governments across Indonesia.</p>
+                        <p>Developing efficient backend systems, robust databases, performance improvements, data
+                            security, and scalable platform maintenance for the Zahir ecosystem.</p>
+                        <span>Current</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Jul 2023 - Dec 2023</time>
+                        <div>
+                            <h3>Web Programmer</h3>
+                            <p class="company">Bappenas RI</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2015 - Oct 2021</div>
-                        <div class="timeline-content">
-                            <h3 id="exp3-role">Senior Fullstack Engineer</h3>
-                            <p class="company" id="exp3-company">PT. Astech Alus Technology</p>
-                            <p id="exp3-desc">Built and designed enterprise solutions from the ground up. Focused on
-                                developing modular and scalable architectures using Laravel and modern PHP, resulting in
-                                products that reduced client operational time by 50%.</p>
+                        <p>Maintained and developed PraDa Bappenas, improved functionality and user experience,
+                            supported troubleshooting, CMS migration, and performance optimization.</p>
+                        <span>GovTech</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Oct 2015 - Sep 2021</time>
+                        <div>
+                            <h3>Web Developer</h3>
+                            <p class="company">Alus Technology</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills" class="skill">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="skills-title">Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3 id="skills-tech"><i class="fas fa-code-branch"></i> Core Stacks</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Golang (GoFiber, Grest)</span>
-                            <span class="skill-tag">PHP (Laravel, Symfony)</span>
-                            <span class="skill-tag">JavaScript (Svelte, Node.js)</span>
-                            <span class="skill-tag">HTML5 & CSS3</span>
+                        <p>Built database-driven web systems with PHP, MySQL, frontend integrations, technical
+                            documentation, and business-to-technical specification translation.</p>
+                        <span>6 yrs</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Jan 2017 - Dec 2020</time>
+                        <div>
+                            <h3>Programmer</h3>
+                            <p class="company">Bappenas RI</p>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 id="skills-db"><i class="fas fa-database"></i> Data & Ops</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MySQL/MariaDB</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Microservices</span>
-                            <span class="skill-tag">Unit Testing</span>
-                        </div>
-                    </div>
-                    <div class="skill-category soft-skills-category">
-                        <h3 id="skills-soft"><i class="fas fa-users"></i> Leadership & Workflow</h3>
-                        <ul class="soft-skills-list">
-                            <li><i class="fas fa-check-circle"></i> Technical Leadership</li>
-                            <li><i class="fas fa-check-circle"></i> Architecture Design</li>
-                            <li><i class="fas fa-check-circle"></i> Mentoring Teams</li>
-                            <li><i class="fas fa-check-circle"></i> Agile Management</li>
-                            <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
-                            <li><i class="fas fa-check-circle"></i> Problem Solving</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="projects-title">Project Stories</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle">Behind every application, there are challenges solved and innovations
-                        built.</p>
-                </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="projects-en.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 20px 50px;">
-                        Read Full Stories <i class="fas fa-arrow-right" style="margin-left: 15px;"></i>
-                    </a>
+                        <p>Developed applications for E-Musrenbang, managed planning data, optimized stability, and
+                            built Bappenas Single Sign-On for better accessibility and security.</p>
+                        <span>SSO</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="products" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="products-title-home">Featured Products</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="products-subtitle-home">Digital innovations I developed for future solutions.</p>
+        <section id="skills" class="section section-panel">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Skills & Stack</p>
+                    <h2 class="section-title">The toolbox I use to keep backend systems clear, fast, and reliable.</h2>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="products-en.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 20px 50px;" id="products-btn-home">
-                        View All Products <i class="fas fa-rocket" style="margin-left: 15px;"></i>
-                    </a>
+                <div class="skills-matrix">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <span>Go</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <span>GoFiber</span>
+                        <span>Grest</span>
+                        <span>Laravel</span>
+                        <span>Symfony</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Architecture</h3>
+                        <span>System Design</span>
+                        <span>RESTful API</span>
+                        <span>Microservices</span>
+                        <span>Service Integration</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data & Ops</h3>
+                        <span>PostgreSQL</span>
+                        <span>MySQL / MariaDB</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="education" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="edu-title">Education</h2>
-                <div class="education-item">
-                    <h3 id="edu1-title">Indraprasta PGRI University</h3>
-                    <p id="edu1-desc">Informatics Engineering (GPA 3.4)</p>
-                    <p class="education-date">2015 - 2019</p>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading inline-heading">
+                    <div>
+                        <p class="section-kicker">Selected Work</p>
+                        <h2 class="section-title">Project stories with backend weight.</h2>
+                    </div>
+                    <a href="projects-en.html" class="text-link">View all projects <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="education-item">
-                    <h3 id="edu2-title">SMKN 1 Cibinong</h3>
-                    <p id="edu2-desc">Software Engineering</p>
-                    <p class="education-date">2012 - 2015</p>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <img src="assets/portofolio/prada.png" alt="PrADa Bappenas RI preview">
+                        <div>
+                            <p>National planning collaboration</p>
+                            <h3>PrADa Bappenas RI</h3>
+                            <span>Golang, PostgreSQL, Redis, Microservices</span>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <img src="assets/portofolio/eoffice.png" alt="E-Office preview">
+                        <div>
+                            <p>Document workflow platform</p>
+                            <h3>E-Office PAM JAYA</h3>
+                            <span>Laravel, MariaDB, Digital Signing</span>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <img src="assets/gold-api-id.png" alt="Emas API ID preview">
+                        <div>
+                            <p>Product API platform</p>
+                            <h3>Emas API ID</h3>
+                            <span>Go, PostgreSQL, Redis, REST API</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="contact-title">Contact Me</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="contact-desc">Feel free to contact me via email or connect on
-                        LinkedIn.</p>
+
+        <section id="education" class="section section-compact">
+            <div class="container credentials-grid">
+                <div>
+                    <p class="section-kicker">Education</p>
+                    <h2>Informatics foundation, sharpened by production systems.</h2>
                 </div>
-                <div class="contact-info">
-                    <a href="mailto:maulana.code@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> <span id="contact-email">maulana.code@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="contact-link">
-                        <i class="fab fa-linkedin"></i> <span id="contact-linkedin">LinkedIn</span>
-                    </a>
+                <div class="credential-list">
+                    <div>
+                        <h3>Universitas Indraprasta PGRI</h3>
+                        <p>Bachelor's degree, Informatics Engineering, 2015 - 2019</p>
+                    </div>
+                    <div>
+                        <h3>SMKN 1 Cibinong</h3>
+                        <p>Computer Software Engineering, 2012 - 2015</p>
+                    </div>
+                    <div>
+                        <h3>Certifications</h3>
+                        <p>Microsoft Technology Associate, Belajar Machine Learning untuk Pemula</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-kicker">Contact</p>
+                    <h2 class="section-title">Let’s build reliable systems together.</h2>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:maulana.code@gmail.com"><i class="fas fa-envelope"></i>
+                        maulana.code@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank"><i class="fab fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="https://github.com/MaulanaR" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://api.whatsapp.com/send/?phone=6285718816971&text=Hi+saya+ingin+bekerjasama&type=phone_number&app_absent=0"
-                        class="contact-link">
-                        <i class="fas fa-phone"></i> <span id="contact-phone">+62 857-1881-6971</span>
-                    </a>
+                        target="_blank"><i class="fas fa-phone"></i> +62 857-1881-6971</a>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <div class="container">
+        <div class="container footer-grid">
             <p>&copy; 2026 Maulana Rahman. All rights reserved.</p>
+            <span>Built with code. Deployed with purpose.</span>
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie.min.js"
-        integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var animation = bodymovin.loadAnimation({
-            container: document.querySelector('.lottie-container'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'css/big_button.json'
-        });
-    </script>
 </body>
 
 </html>

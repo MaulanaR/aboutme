@@ -4,41 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maulana Rahman - Senior Backend Engineer</title>
+    <title>Maulana Rahman - Backend Systems Architect</title>
     <meta name="description"
-        content="Portfolio pribadi Maulana Rahman, seorang Senior Backend Engineer dengan pengalaman lebih dari 8 tahun membangun infrastruktur digital nasional dan ekosistem enterprise.">
-    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+        content="Portfolio Maulana Rahman, backend systems architect yang fokus pada API skalabel, Go, PHP, system design, dan platform data yang reliabel.">
+    <link rel="stylesheet" href="css/style.css?v=2.0.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ve90w8nvrl");
     </script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#hero" class="nav-logo" id="nav-logo"><img src="assets/logo.png" alt="Maulana Rahman"></a>
-                <ul class="nav-menu">
-                    <li><a href="#about" id="nav-about">Tentang</a></li>
-                    <li><a href="#experience" id="nav-experience">Pengalaman</a></li>
-                    <li><a href="#skills" id="nav-skills">Keahlian</a></li>
-                    <li><a href="projects.html" id="nav-projects">Proyek</a></li>
-                    <li><a href="products.html" id="nav-products">Produk</a></li>
-                    <li><a href="#contact" id="nav-contact">Kontak</a></li>
-                </ul>
-                <div class="lang-switch">
-                    <button id="btn-id" class="btn-lang active">ID</button>
-                    <button id="btn-en" class="btn-lang">EN</button>
+    <header class="site-header">
+        <nav class="container nav-shell" aria-label="Navigasi utama">
+            <a href="#hero" class="nav-logo" id="nav-logo" aria-label="Beranda Maulana Rahman">
+                <span>Maulana Rahman</span>
+                <i aria-hidden="true"></i>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" id="nav-about">Tentang</a></li>
+                <li><a href="#experience" id="nav-experience">Pengalaman</a></li>
+                <li><a href="#skills" id="nav-skills">Keahlian</a></li>
+                <li><a href="projects.html" id="nav-projects">Proyek</a></li>
+                <li><a href="products.html" id="nav-products">Produk</a></li>
+                <li><a href="#contact" id="nav-contact">Kontak</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switch" aria-label="Pengalih bahasa">
+                    <button id="btn-id" class="btn-lang active" type="button">ID</button>
+                    <button id="btn-en" class="btn-lang" type="button">EN</button>
                 </div>
-                <button class="nav-toggle" aria-label="Buka navigasi">
+                <button class="nav-toggle" type="button" aria-label="Buka navigasi">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -47,314 +52,261 @@
 
     <main>
         <section id="hero" class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <div class="status-badge fade-in">
-                        <span class="status-dot"></span> <span id="hero-status">Tersedia untuk Proyek Strategis</span>
-                    </div>
-                    <h1 class="fade-in" id="hero-title">Maulana Rahman</h1>
-                    <p class="hero-role fade-in-delay-1" id="hero-role">Senior Backend Engineer</p>
-                    <p class="hero-summary fade-in-delay-2" id="hero-summary">
-                        Mentransformasi logika bisnis yang kompleks menjadi sistem backend berperforma tinggi dan
-                        skalabel. Spesialis dalam Golang & PHP dengan rekam jejak 8+ tahun membangun infrastruktur
-                        digital berskala nasional.
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>Maulana Rahman</h1>
+                    <p class="hero-role">Backend <span>Systems Architect</span></p>
+                    <p class="hero-summary">
+                        Saya merancang, membangun, dan menyempurnakan sistem backend, API, serta platform data yang
+                        menjaga aplikasi bisnis tetap reliabel di beban kerja nyata.
                     </p>
-                    <div class="hero-buttons fade-in-delay-3">
-                        <a href="#contact" class="btn btn-primary" id="hero-contact">Hubungi Saya</a>
-                        <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-secondary"
-                            id="hero-linkedin">Lihat LinkedIn</a>
-                        <a href="https://github.com/MaulanaR" target="_blank" class="btn btn-secondary"
-                            id="hero-github">View Github</a>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">Lihat Proyek <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Kontak <i class="fas fa-arrow-right"></i></a>
+                        <a href="assets/Maulana-Rahman-CV-2026.pdf" class="btn btn-ghost" target="_blank">Unduh CV</a>
                     </div>
                 </div>
-                <div class="hero-image fade-in">
-                    <img src="assets/maulana-rahman.png" alt="Foto Maulana Rahman">
+
+                <div class="system-map" aria-hidden="true">
+                    <div class="map-node node-api">API Gateway</div>
+                    <div class="map-node node-service">Services</div>
+                    <div class="map-node node-db">Database</div>
+                    <div class="map-line line-a"></div>
+                    <div class="map-line line-b"></div>
+                    <div class="server-stack">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <aside class="profile-panel" aria-label="Ringkasan profil">
+                    <div class="portrait-frame">
+                        <img src="assets/maulana-rahman-professional.png" alt="Foto Maulana Rahman">
+                    </div>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-location-dot"></i> West Java, Indonesia</span>
+                        <span><i class="fas fa-envelope"></i> maulana.code@gmail.com</span>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="container stat-rail" aria-label="Sorotan profesional">
+                <div>
+                    <i class="fas fa-calendar-days"></i>
+                    <strong>10+</strong>
+                    <span>Tahun Pengalaman</span>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <strong>Go / PHP</strong>
+                    <span>Bahasa Utama</span>
+                </div>
+                <div>
+                    <i class="fas fa-building-columns"></i>
+                    <strong>National-scale</strong>
+                    <span>Sistem & Platform</span>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="about-title">Tentang Saya</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="about-desc">
-                        Dengan pengalaman lebih dari 8 tahun, saya spesialis dalam membangun sistem backend yang tangguh
-                        dan berperforma tinggi untuk aplikasi skala besar. Mulai dari merancang API kompleks di Zahir
-                        Internasional hingga memodernisasi infrastruktur digital nasional untuk Bappenas RI, saya
-                        mengubah kebutuhan bisnis yang rumit menjadi kode yang skalabel. Saya tidak hanya menulis
-                        fungsi; saya membangun pondasi digital yang aman, efisien, dan siap menghadapi masa depan.
+        <section id="about" class="section section-compact">
+            <div class="container two-column">
+                <div>
+                    <p class="section-kicker">Profil</p>
+                    <h2 class="section-title">Arsitektur server-side untuk sistem yang perlu bertahan lama.</h2>
+                </div>
+                <div class="lead-copy">
+                    <p>
+                        Fokus saya ada pada arsitektur backend, kontrak API yang bersih, performa database, integrasi
+                        service, dan business logic yang mudah dirawat. Pengalaman Go dan PHP saya dilengkapi pemahaman
+                        praktis tentang distributed system, keamanan, dokumentasi, dan kolaborasi lintas tim.
                     </p>
-                </div>
-
-                <div class="specialization-bar">
-                    <div class="spec-item"><span>Microservices</span></div>
-                    <div class="spec-item"><span>RESTful API</span></div>
-                    <div class="spec-item"><span>Optimasi Database</span></div>
-                    <div class="spec-item"><span>Arsitektur Sistem</span></div>
-                    <div class="spec-item"><span>Infrastruktur Cloud</span></div>
-                </div>
-
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <i class="fas fa-rocket"></i>
-                        <h3 id="high1-title">Skalabilitas</h3>
-                        <p id="high1-desc">Arsitektur sistem yang siap tumbuh bersama jutaan pengguna.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3 id="high2-title">Keamanan</h3>
-                        <p id="high2-desc">Prioritas utama pada integritas dan perlindungan data sensitif.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-bolt"></i>
-                        <h3 id="high3-title">Performa</h3>
-                        <p id="high3-desc">Optimasi kode untuk latensi rendah dan throughput tinggi.</p>
-                    </div>
-                </div>
-
-                <div class="key-achievements animate-on-scroll">
-                    <h3 id="achieve-title">Pencapaian Utama</h3>
-                    <ul class="achieve-list">
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-1">Meningkatkan efisiensi pemrosesan
-                                data sebesar 40% untuk ekosistem Zahir.</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-2">Berhasil memigrasikan database
-                                skala nasional Bappenas tanpa downtime.</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span id="achieve-3">Merancang sistem kolaborasi
-                                pemerintah yang digunakan di seluruh provinsi Indonesia.</span></li>
-                    </ul>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label" id="stat-exp">Tahun Pengalaman</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label" id="stat-proj">Proyek Selesai</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label" id="stat-focus">Backend Focus</span>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 60px;">
-                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="btn btn-secondary"
-                        style="padding: 15px 40px; font-size: 1.1rem;">
-                        <i class="fas fa-file-download" style="margin-right: 10px;"></i> <span id="btn-cv">Unduh CV
-                            Lengkap</span>
-                    </a>
-                </div>
-
-                <div class="philosophy-section animate-on-scroll">
-                    <h3 class="philosophy-title" id="phi-title">Filosofi Kerja</h3>
-                    <div class="philosophy-grid">
-                        <div class="phi-item">
-                            <span class="phi-icon">💎</span>
-                            <h4 id="phi1-title">Clean Code</h4>
-                            <p id="phi1-desc">Kode yang mudah dibaca adalah kode yang mudah dipelihara.</p>
-                        </div>
-                        <div class="phi-item">
-                            <span class="phi-icon">🏗️</span>
-                            <h4 id="phi2-title">Scalable Design</h4>
-                            <p id="phi2-desc">Membangun untuk hari ini dengan visi untuk masa depan.</p>
-                        </div>
-                        <div class="phi-item">
-                            <span class="phi-icon">🧪</span>
-                            <h4 id="phi3-title">Test Driven</h4>
-                            <p id="phi3-desc">Kualitas dijamin melalui pengujian yang ketat dan otomatis.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="methodology-bar animate-on-scroll">
-                    <div class="method-item"><i class="fas fa-sync-alt"></i> <span>Agile/Scrum</span></div>
-                    <div class="method-item"><i class="fas fa-code-branch"></i> <span>Gitflow</span></div>
-                    <div class="method-item"><i class="fas fa-vial"></i> <span>TDD/Unit Test</span></div>
-                    <div class="method-item"><i class="fas fa-server"></i> <span>CI/CD Pipelines</span></div>
-                </div>
-
-                <div class="hire-cta animate-on-scroll">
-                    <div class="hire-content">
-                        <h3 id="hire-title">Mencari Backend Lead?</h3>
-                        <p id="hire-desc">Saya siap membantu Anda membangun sistem yang skalabel dan aman. Mari
-                            bicarakan bagaimana saya bisa memberikan nilai bagi tim Anda.</p>
-                    </div>
-                    <a href="#contact" class="btn btn-primary" id="hire-btn">Mulai Kolaborasi <i
-                            class="fas fa-comment-dots"></i></a>
+                    <p>
+                        Saya menikmati proses mengubah masalah teknis yang kompleks menjadi sistem yang stabil, elegan,
+                        mudah dioperasikan, dan siap dikembangkan.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="exp-title">Pengalaman Kerja</h2>
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Pengalaman</p>
+                    <h2 class="section-title">Pengiriman backend untuk enterprise, pemerintahan, dan produk digital.</h2>
+                </div>
                 <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Okt 2021 - Sekarang</div>
-                        <div class="timeline-content">
-                            <h3 id="exp1-role">Senior Backend Engineer</h3>
-                            <p class="company" id="exp1-company">PT. Zahir Internasional</p>
-                            <p id="exp1-desc">Bersama team mengembangkan API inti untuk ekosistem Zahir (Accounting, HR,
-                                Inventory). Berhasil meningkatkan efisiensi pemrosesan data sebesar 40% dan
-                                mengintegrasikan sistem pembayaran pihak ketiga yang melayani ribuan bisnis UMKM di Asia
-                                Tenggara.</p>
+                    <article class="timeline-item">
+                        <time>Okt 2021 - Sekarang</time>
+                        <div>
+                            <h3>Back End Developer</h3>
+                            <p class="company">PT Zahir Internasional</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2017-2020, Jun - Des 2023,Jun - Des 2024</div>
-                        <div class="timeline-content">
-                            <h3 id="exp2-role">Technical Architect & Web Programmer</h3>
-                            <p class="company" id="exp2-company">Kementerian PPN/Bappenas</p>
-                            <p id="exp2-desc">Merancang arsitektur sistem PRADA untuk kolaborasi perencanaan nasional.
-                                Mengelola migrasi database skala besar tanpa downtime dan mengoptimalkan performa
-                                dashboard yang digunakan oleh seluruh Bappeda di Indonesia.</p>
+                        <p>Mengembangkan backend yang efisien, database yang kuat, peningkatan performa, prinsip
+                            keamanan data, serta maintenance platform yang skalabel untuk ekosistem Zahir.</p>
+                        <span>Current</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Jul 2023 - Des 2023</time>
+                        <div>
+                            <h3>Web Programmer</h3>
+                            <p class="company">Bappenas RI</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Okt 2015 - Okt 2021</div>
-                        <div class="timeline-content">
-                            <h3 id="exp3-role">Senior Fullstack Engineer</h3>
-                            <p class="company" id="exp3-company">PT. Astech Alus Technology</p>
-                            <p id="exp3-desc">Membangun dan merancang solusi enterprise dari nol. Fokus pada
-                                pengembangan arsitektur yang modular dan skalabel menggunakan Laravel dan PHP modern,
-                                menghasilkan produk yang memangkas waktu operasional klien hingga 50%.</p>
+                        <p>Maintaining dan mengembangkan PraDa Bappenas, meningkatkan fungsi dan pengalaman pengguna,
+                            mendukung troubleshooting, migrasi CMS, serta optimasi performa.</p>
+                        <span>GovTech</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Okt 2015 - Sep 2021</time>
+                        <div>
+                            <h3>Web Developer</h3>
+                            <p class="company">Alus Technology</p>
                         </div>
-                    </div>
+                        <p>Membangun sistem web berbasis database menggunakan PHP, MySQL, integrasi frontend,
+                            dokumentasi teknis, dan penerjemahan kebutuhan bisnis menjadi spesifikasi teknis.</p>
+                        <span>6 yrs</span>
+                    </article>
+                    <article class="timeline-item">
+                        <time>Jan 2017 - Des 2020</time>
+                        <div>
+                            <h3>Programmer</h3>
+                            <p class="company">Bappenas RI</p>
+                        </div>
+                        <p>Mengembangkan aplikasi pendukung E-Musrenbang, mengelola data perencanaan, mengoptimalkan
+                            stabilitas, dan membangun Single Sign-On Bappenas.</p>
+                        <span>SSO</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skill">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="skills-title">Keahlian</h2>
-                <div class="skills-grid">
+        <section id="skills" class="section section-panel">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Keahlian & Stack</p>
+                    <h2 class="section-title">Toolbox yang saya gunakan untuk menjaga backend tetap jelas, cepat, dan
+                        reliabel.</h2>
+                </div>
+                <div class="skills-matrix">
                     <div class="skill-category">
-                        <h3 id="skills-tech"><i class="fas fa-code-branch"></i> Core Stacks</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Golang (GoFiber, Grest)</span>
-                            <span class="skill-tag">PHP (Laravel, Symfony)</span>
-                            <span class="skill-tag">JavaScript (Svelte, Node.js)</span>
-                            <span class="skill-tag">HTML5 & CSS3</span>
-                        </div>
+                        <h3>Languages</h3>
+                        <span>Go</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
                     </div>
                     <div class="skill-category">
-                        <h3 id="skills-db"><i class="fas fa-database"></i> Data & Ops</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MySQL/MariaDB</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Microservices</span>
-                            <span class="skill-tag">Unit Testing</span>
+                        <h3>Frameworks</h3>
+                        <span>GoFiber</span>
+                        <span>Grest</span>
+                        <span>Laravel</span>
+                        <span>Symfony</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Architecture</h3>
+                        <span>System Design</span>
+                        <span>RESTful API</span>
+                        <span>Microservices</span>
+                        <span>Service Integration</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data & Ops</h3>
+                        <span>PostgreSQL</span>
+                        <span>MySQL / MariaDB</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading inline-heading">
+                    <div>
+                        <p class="section-kicker">Selected Work</p>
+                        <h2 class="section-title">Kisah proyek dengan bobot backend yang nyata.</h2>
+                    </div>
+                    <a href="projects.html" class="text-link">Lihat semua proyek <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <img src="assets/portofolio/prada.png" alt="Preview PrADa Bappenas RI">
+                        <div>
+                            <p>Kolaborasi perencanaan nasional</p>
+                            <h3>PrADa Bappenas RI</h3>
+                            <span>Golang, PostgreSQL, Redis, Microservices</span>
                         </div>
+                    </article>
+                    <article class="featured-card">
+                        <img src="assets/portofolio/eoffice.png" alt="Preview E-Office">
+                        <div>
+                            <p>Platform workflow dokumen</p>
+                            <h3>E-Office PAM JAYA</h3>
+                            <span>Laravel, MariaDB, Digital Signing</span>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <img src="assets/gold-api-id.png" alt="Preview Emas API ID">
+                        <div>
+                            <p>Platform API produk</p>
+                            <h3>Emas API ID</h3>
+                            <span>Go, PostgreSQL, Redis, REST API</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section-compact">
+            <div class="container credentials-grid">
+                <div>
+                    <p class="section-kicker">Pendidikan</p>
+                    <h2>Fondasi informatika, diasah lewat sistem produksi.</h2>
+                </div>
+                <div class="credential-list">
+                    <div>
+                        <h3>Universitas Indraprasta PGRI</h3>
+                        <p>Sarjana Teknik Informatika, 2015 - 2019</p>
                     </div>
-                    <div class="skill-category soft-skills-category">
-                        <h3 id="skills-soft"><i class="fas fa-users"></i> Leadership & Workflow</h3>
-                        <ul class="soft-skills-list">
-                            <li><i class="fas fa-check-circle"></i> Technical Leadership</li>
-                            <li><i class="fas fa-check-circle"></i> Architecture Design</li>
-                            <li><i class="fas fa-check-circle"></i> Mentoring Teams</li>
-                            <li><i class="fas fa-check-circle"></i> Agile Management</li>
-                            <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
-                            <li><i class="fas fa-check-circle"></i> Problem Solving</li>
-                        </ul>
+                    <div>
+                        <h3>SMKN 1 Cibinong</h3>
+                        <p>Rekayasa Perangkat Lunak, 2012 - 2015</p>
+                    </div>
+                    <div>
+                        <h3>Sertifikasi</h3>
+                        <p>Microsoft Technology Associate, Belajar Machine Learning untuk Pemula</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="projects-title">Kisah Proyek</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle">Dibalik setiap aplikasi, ada tantangan yang dipecahkan dan inovasi yang
-                        dibangun.</p>
+        <section id="contact" class="section contact-section">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-kicker">Kontak</p>
+                    <h2 class="section-title">Mari bangun sistem yang reliabel bersama.</h2>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="projects.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 20px 50px;">
-                        Baca Kisah Selengkapnya <i class="fas fa-arrow-right" style="margin-left: 15px;"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="products-title-home">Produk Unggulan</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="products-subtitle-home">Inovasi digital yang saya kembangkan untuk solusi masa depan.</p>
-                </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="products.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 20px 50px;" id="products-btn-home">
-                        Lihat Semua Produk <i class="fas fa-rocket" style="margin-left: 15px;"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section-bg">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="edu-title">Pendidikan</h2>
-                <div class="education-item">
-                    <h3 id="edu1-title">Universitas Indraprasta PGRI</h3>
-                    <p id="edu1-desc">Prodi Teknik Informatika (IPK 3.4)</p>
-                    <p class="education-date">2015 - 2019</p>
-                </div>
-                <div class="education-item">
-                    <h3 id="edu2-title">SMKN 1 Cibinong</h3>
-                    <p id="edu2-desc">Jurusan Rekayasa Perangkat Lunak (RPL)</p>
-                    <p class="education-date">2012 - 2015</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container animate-on-scroll">
-                <h2 class="section-title" id="contact-title">Hubungi Saya</h2>
-                <div class="section-subtitle-container">
-                    <p class="section-subtitle" id="contact-desc">Jangan ragu untuk menghubungi saya melalui email atau
-                        terhubung di LinkedIn.</p>
-                </div>
-                <div class="contact-info">
-                    <a href="mailto:maulana.code@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> <span id="contact-email">maulana.code@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank" class="contact-link">
-                        <i class="fab fa-linkedin"></i> <span id="contact-linkedin">LinkedIn</span>
-                    </a>
+                <div class="contact-links">
+                    <a href="mailto:maulana.code@gmail.com"><i class="fas fa-envelope"></i>
+                        maulana.code@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/maulana-r/" target="_blank"><i class="fab fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="https://github.com/MaulanaR" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://api.whatsapp.com/send/?phone=6285718816971&text=Hi+saya+ingin+bekerjasama&type=phone_number&app_absent=0"
-                        class="contact-link">
-                        <i class="fas fa-phone"></i> <span id="contact-phone">+62 857-1881-6971</span>
-                    </a>
+                        target="_blank"><i class="fas fa-phone"></i> +62 857-1881-6971</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container footer-grid">
             <p>&copy; 2026 Maulana Rahman. All rights reserved.</p>
+            <span>Built with code. Deployed with purpose.</span>
         </div>
     </footer>
-
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie.min.js"
-        integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var animation = bodymovin.loadAnimation({
-            container: document.querySelector('.lottie-container'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'css/big_button.json'
-        });
-    </script>
 </body>
 
 </html>
